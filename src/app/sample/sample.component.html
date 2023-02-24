@@ -1,0 +1,90 @@
+<p>sample works!</p>
+<!-- <div>
+    <button (click)="getAlltrips()">List of Trips</button>
+    <div *ngFor="let x of alltrips"> 
+        
+        <div>{{x.userId}}-{{x.fromLocation}} to {{x.toLocation}}</div>
+   </div>
+   </div> -->
+   <button (click)="getAlltrips()">List of Trips</button>
+   <div class="container">
+    <div class="row">
+        <div class="col">
+   <div class="card">
+    <div *ngFor="let x of alltrips"> 
+    <h3 class="card-header">TripID - {{x.tripId}}</h3>
+    <div class="card-body">
+      <h5 class="card-title">Driver details - </h5>
+      DriverId:{{x.driverId}}<br/>
+      Driver LicenceNo:{{x.licenceNo}}<br/>
+      Driver Language:{{x.nativeLanguage}}
+      <h5 class="card-title">User details-</h5>
+      UserId:{{x.userId}}<br/>
+      UserName:{{x.userName}}<br/>
+      Gender:{{x.gender}}<br/>
+      PhoneNumber:{{x.phoneNumber}}<br/>
+      FromLocation:{{x.fromLocation}}<br/>
+      ToLocation:{{x.toLocation}}<br/>
+      FromDateTime:{{x.fromDateTime}}<br/>
+      ToDateTime:{{x.toDateTime}}<br/>
+      Status:{{x.status}}<br/>
+      Distance:{{x.distanceInKm}}<br/> 
+      Bill:{{x.totalbillAmount}}  
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  
+   <hr/>
+   <div>
+   <input type="text" #userId>
+   <button (click)="getAlltripsByUser(userId.value)">Load by userId</button>
+   <div *ngFor="let b of alltrips">
+       <table>
+           <tr>
+               <td>{{b.fromLocation}}-</td>
+               <td>{{b.toLocation}}</td>
+           </tr>
+       </table>
+   </div>
+   </div>
+   <hr/>
+   <div>
+       <input type="text" #driverId>
+       <button (click)="getAlltripsByDriver(driverId.value)">Load by driverId</button>
+       <div *ngFor="let b of alltrips">
+           <table>
+               <tr>
+                   <td>{{b.fromLocation}}-</td>
+                   <td>{{b.toLocation}}</td>
+               </tr>
+           </table>
+       </div>
+       </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <!-- <input type="text" value="name"   #userId>
+   <button (click)="getAlltripsByUser(userId.value)">List of Trips By User</button>
+       <div>{{x.fromLocation}} </div>
+       <div>{{x.toLocation}}</div>    -->
+   
+   
